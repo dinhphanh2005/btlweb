@@ -1,4 +1,5 @@
 [
+    "post": [
     { 
         "id": 1, 
         "name": "Aspirin", 
@@ -134,4 +135,5 @@
         "description": "Furosemide is used to reduce excess fluid in the body.",
         "image": "img/Furosemide.png" 
     }
+    ]
 ]
