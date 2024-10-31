@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mockups For Free</title>
+        <!-- Liên kết tới file CSS -->
+        <link rel="stylesheet" href="/css/styles_m.css">
+        <!-- Link tới Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+
+    <body>
+        <div class="navbar">
+            <div class="logo">
+                <img alt="Company Logo" src="https://storage.googleapis.com/a1aa/image/1tx5Ad5fmRUjJKSoPR1cyZhYuv1VxkGN70gPNRUftbfO15KnA.jpg" width="40" height="40"/>
+                <span>PillCare</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Management</a></li>
+            </ul>
+
+            <div class="user-signin">
+                <div class="user-profile">
+                    <img src="/img/IMG_1820.JPG" alt="User Profile"/>
+                </div>
+                <a class="sign-in" href="#">Sign in</a>
+            </div>
+        </div>
+
+        <main>
+            <section class="search-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </section>
+
+            <section class="grid-container">
+                <div class="boxes col-10">
+                    <div class="revenue-day">
+                        <h3 class="text">Revenue of the day</h3>
+                        <p class="number">10.450.000</p>
+                    </div>
+
+                    <div class="low-supplies">
+                        <h3 class="text">Low on supplies</h3>
+                        <div class="medicine">
+                            <p class="medicine-1">- Diphenhydramine: 20 pills</p>
+                            <p class="medicine-2">- Ibuprofen: 10 bottles</p>
+                            <p class="medicine-3">- Guaifenesin: 30 boxes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown col-2">
+                    <button class="button">+</button>
+                    <div class="dropdown-container">
+                        <button class="add-btn">Add</button>
+                        <a href="index_cr.html">Change/Remove</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="chart">
+                <div class="my-chart">
+                    <h3>Chart</h3>
+                    <canvas id="chart-canvas"></canvas>
+                </div>
+
+                <div class="pagination-bar">
+                    <button class="pag-weekly">Weekly</button>
+                    <button class="pag-monthly">Monthly</button>
+                    <button class="pag-yearly">Yearly</button>
+                </div>
+            </section>
+        </main>
+
+        <div class="overlay-add" id="overlay-add">
+            <h2>Add Medicine</h2>
+            <form>
+                <div class="form-medicine">
+                    <label for="medicine-name">Medicine Name (Required):</label><br>
+                    <input type="text" id="medicine-name" name="medicine-name"><br><br>
+
+                    <label for="generic-name">Generic Name (Optional):</label><br>
+                    <input type="text" id="generic-name" name="generic-name"><br><br>
+
+                    <label for="price">Price (Required):</label><br>
+                    <input type="text" id="price" name="price"><br><br>
+
+                    <label for="manufacturing-date">Manufacturing Date (Optional):</label><br>
+                    <input type="text" id="manufacturing-date" name="manufacturing-date"><br><br>
+
+                    <label for="">Expiry Date (Required):</label><br>
+                    <input type="text" id="expiry-date" name="expiry-date"><br><br>
+
+                    <label for="">Stock Quantity (Required):</label><br>
+                    <input type="text" id="stock-quantity" name="stock-quantity"><br><br>
+
+                    <label for="">Location In Store (Optional):</label><br>
+                    <input type="text" id="location-in-store" name="location-in-store"><br><br>
+
+                    <label for="">Additional Notes (Optional):</label><br>
+                    <input type="text" id="additional-notes" name="additional-notes"><br><br>
+
+                    <div class="requires-prescription">
+                        <label for="requires-prescription">Requires Prescription (Required):</label><br>
+                        <select id="requires-prescription" name="requires-prescription">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                        <!-- <i class="fa-solid fa-chevron-down"></i> -->
+                    </div><br>
+
+                    <div class="type-of-medicine">
+                        <label for="type-med">Type Of Medicine (Required):</label><br>
+                        <select id="type-med" name="type-med">
+                            <option value="tablets">Tablets</option>
+                            <option value="capsules">Capsules</option>
+                            <option value="syrups">Syrups</option>
+                            <option value="injections">Injections</option>
+                            <option value="creams/ointments">Creams/Ointments</option>
+                            <option value="powders">Powders</option>
+                            <option value="inhalers">Inhalers</option>
+                            <option value="suppositories">Suppositories</option>
+                            <option value="patches">Patches</option>
+                            <option value="others">Others</option>
+                        </select>
+                        <!-- <i class="fa-solid fa-chevron-down"></i> -->
+                    </div><br>
+
+                    <button type="submit">Submit</button>
+                </div>
+
+                <div class="picture-of-medicine">
+                    <button><i class="fa-regular fa-image"></i></button>
+                </div>
+            </form>
+        </div>
+        
+        <script src="/js/script_m.js"></script>
+    </body>
+</html>
