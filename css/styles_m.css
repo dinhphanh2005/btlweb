@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito%20Sans:700|Inter:400');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Inter';
+}
+
+:root {
+    --bg-color: black;
+    --second-bg-color: #f7f7f7;
+    --text-color: black;
+    --text-second-cl: #fff;
+    --primary-color: #66bdff;
+    --secondary-color: #14b5ff;
+    --accent-color: #e5faff;
+    --text-headings: 'Nunito Sans';
+    --text-body: 'Inter';
+}
+
+@media (min-width: 1024px) {
+    /* Styles for large screens */
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    .search-bar {
+        width: 50%;
+    }
+}
+
+/* Styles for tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Styles for medium screens */
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .search-bar {
+        width: 100%;
+    }
+}
+
+/* Styles for mobile devices */
+@media (max-width: 767px) {
+    /* Styles for small screens */
+    body {
+        padding: 10px;
+    }
+    .search-bar {
+        width: 100%;
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+}
+
+body {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .logo span {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin: 0 15px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.navbar .nav-links a:hover {
+    color: #000;
+}
+
+.navbar .user-signin {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .sign-in {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar .sign-in:hover {
+    background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+}
+
+.navbar .user-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.navbar .user-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 10px; 
+    margin: 0 auto;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 40px;
+}
+
+.col-10 {
+    grid-column: span 10;
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.revenue-day, .low-supplies {
+    padding: 15px 20px;
+    border: 1px solid #172A3A;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.revenue-day h3 {
+    padding: 15px;
+}
+
+.low-supplies h3 {
+    padding: 15px;
+}
+
+.revenue-day > .number {
+    font-size: 30px;
+}
+
+.medicine {
+    display: inline-block;
+    text-align:left;
+    font-style: italic;
+}
+
+.medicine p {
+    margin: 10px;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+.dropdown {
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.button {
+    padding: 10px 15px;
+    font-size: 25px;
+    background-color: #fff;
+    border: 1px solid #172A3A;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-no-border {
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+}
+
+.dropdown-container {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: 1px solid #172A3A;
+    border-radius: 0 5px 5px 5px;
+    position: absolute;
+    /* visibility: hidden; */
+    /* right: 0;  */
+    min-width: 100px; 
+    max-width: 100%;
+    overflow-y: auto;
+    max-height: 200px;  
+}
+
+.dropdown.active .dropdown-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-container-no-border {
+    border-radius: 0 5px 5px 5px;;
+}
+
+.dropdown-container::-webkit-scrollbar {
+    display: none;
+}
+
+.dropdown-container > button {
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #172A3A;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    color: #172A3A;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-container a {
+    text-decoration: none;
+    color: #172A3A;
+    padding: 10px 15px;
+    margin: 0 auto;
+    width: 100%; 
+    /* text-align: center;  */
+    border-bottom: 1px solid #172A3A; 
+    box-sizing: border-box;
+}
+
+.dropdown-container a:last-child {
+    border-bottom: none; 
+}
+
+.chart {
+    font-size: 20px;
+    padding: 5px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.my-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+} 
+
+canvas {
+    width: 100% !important;        
+    max-width: 800px !important;  
+    height: 400px !important;     
+    margin: 0 auto;  
+}
+
+.chart-canvas {
+    padding: 5px;
+    border: 1px solid #172A3A;
+    border-radius: 10px;
+}
+
+.pagination-bar {
+    padding: 5px;
+}
+
+.pagination-bar > button {
+    padding: 8px;
+    margin: 0 2px;
+    background-color: #fff;
+    border: 1px solid #172A3A;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-bar > button.active {
+    background-color: #172A3A;
+    color: #fff;
+}
