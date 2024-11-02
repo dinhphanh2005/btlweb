@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('/data/db.json') // Update the path to your JSON file
+    fetch('data/db.json') // Update the path to your JSON file
         .then(response => response.json())
         .then(data => {
             const lowSuppliesContainer = document.querySelector(".low-supplies .medicine");
