@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let medicines = [];
 
     // Fetch medicines from JSON
-    fetch("http://localhost:3000/medicines") 
+    fetch("https://dinhphanh2005.github.io/btlweb/data/db.json/") 
         .then(res => res.json())
         .then(data => {
             medicines = data.map(medicine => {
